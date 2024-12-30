@@ -53,5 +53,6 @@
       }
     }
   },
-  "workspaceLayout": { "appsDir": "apps", "libsDir": "packages" }
+  "workspaceLayout": { "appsDir": "apps", "libsDir": "packages" },
+  "nxCloudId": "67721ee99b2056c960082e8b"
 }
