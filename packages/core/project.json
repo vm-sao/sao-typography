@@ -1,0 +1,50 @@
+{
+  "name": "core",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/core",
+  "projectType": "library",
+  "tags": ["sao-typography", "core"],
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "rm -rf dist/packages/core",
+          "mkdir -p dist/packages/core",
+          "rsync -a --exclude='project.json' --exclude='main.mjs' --exclude='node_modules' packages/core/ dist/packages/core/",
+          "node packages/core/main.mjs"
+        ],
+        "parallel": false
+      }
+    },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "cd dist/packages/core && pnpm publish --access public --no-git-checks"
+        ],
+        "parallel": false
+      }
+    },
+    "auto": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "pnpm nx build core --parallel=false",
+          "pnpm nx publish core --parallel=false"
+        ],
+        "parallel": false
+      }
+    },
+    "ci": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "pnpm nx build core --parallel=false",
+          "pnpm nx publish core --parallel=false --dry-run"
+        ],
+        "parallel": false
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "@sao-typography/core",
+  "version": "0.0.1",
+  "private": false,
+  "author": "Elias Vinh",
+  "license": "MIT",
+  "description": "SAO Typography Package for getting typography styling (css, scss, sass)",
+  "homepage": "https://github.com/vm-sao/sao-typography",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vm-sao/sao-typography.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/vm-sao/sao-typography/issues",
+    "email": "anlalayker@gmail.com"
+  },
+  "keywords": [
+    "vm-sao",
+    "sao-typography"
+  ],
+  "exports": {
+    ".": "./index.css",
+    "./index": "./index.css",
+    "./index.css": "./index.css",
+    "./index.scss": "./index.scss",
+    "./css": "./index.css",
+    "./scss": "./index.scss",
+    "./sass": "./index.scss",
+    "./variables": "./variables.scss",
+    "./variables.scss": "./variables.scss",
+    "./mixins": "./mixins.scss",
+    "./mixins.scss": "./mixins.scss"
+  },
+  "peerDependencies": {
+    "@fontsource/work-sans": "latest"
+  }
+}
