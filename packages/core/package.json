@@ -1,6 +1,6 @@
 {
   "name": "@sao-typography/core",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "private": false,
   "author": "Elias Vinh",
   "license": "MIT",
@@ -30,7 +30,9 @@
     "./variables": "./variables.scss",
     "./variables.scss": "./variables.scss",
     "./mixins": "./mixins.scss",
-    "./mixins.scss": "./mixins.scss"
+    "./mixins.scss": "./mixins.scss",
+    "./tailwind": "./tailwind/index.js",
+    "./tailwind/provide-typography": "./tailwind/provide-typography.js"
   },
   "peerDependencies": {
     "@fontsource/work-sans": "latest"
